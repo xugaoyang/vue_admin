@@ -1,0 +1,603 @@
+@charset "utf-8";
+
+@import 'element-variables';
+@import 'sass/utilities/_all';
+@import 'sass/base/_all';
+@import 'sass/elements/_all';
+@import 'sass/components/_all';
+@import 'sass/grid/_all';
+@import 'sass/layout/_all';
+@import 'sass/custom/_all';
+
+html {
+  background: #0e1319 !important;
+
+  ::-webkit-scrollbar {
+    background-color: #2b363f;
+    width: 5px;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    //设置滑块
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.1); //设置背景透明
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+span.c-white,
+i.c-white {
+  color: $--color-text-primary !important;
+}
+
+#BasicLayout {
+  height: 100vh;
+  background: url('/images/home-bg.jpg');
+  background-size: cover;
+}
+
+.login-board {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background: #0e1319;
+
+  .el-input__inner {
+    color: #606266;
+    border-color: #d9d9d9;
+  }
+
+  .el-button--primary {
+    background-color: #1890ff !important;
+    border-color: #1890ff !important;
+  }
+}
+
+.box-shadow {
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.el-header {
+  padding: 0;
+}
+
+.el-main {
+  padding: 15px;
+}
+
+.el-menu {
+  border: none;
+
+  .el-menu-item.is-active {
+    background-color: #1890ff;
+  }
+
+  .el-menu-item:hover,
+  .el-menu-item:focus {
+    background-color: #1890ff;
+  }
+
+  .el-submenu__title:hover {
+    background-color: #1890ff;
+  }
+}
+
+.common-topbar-top {
+  background: #111820;
+  color: #fff;
+
+  .all-nav {
+    width: 57px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+    border-right: 1px solid hsla(0, 0%, 100%, 0.15);
+  }
+
+  .common-topbar-logo {
+    display: block;
+    padding-top: 15px;
+    padding-left: 10px;
+
+    img {
+      height: 25px;
+    }
+  }
+}
+
+.common-topbar-bottom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+  input.el-input__inner {
+    border: none !important;
+  }
+}
+
+.el-dialog__header {
+  border-bottom: 1px solid #595959 !important;
+}
+
+.common-topbar-top {
+  background: #252a2e !important;
+}
+
+.el-table th {
+  color: #f2f2f2 !important;
+}
+
+.el-table td {
+  .el-button--small {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+.el-card__header {
+  padding: 10px !important;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.cur-pointer {
+  cursor: pointer;
+}
+
+.el-collapse-item__content {
+  padding-bottom: 45px;
+}
+
+.el-menu-item.is-active {
+  &:hover {
+    color: $--color-text-primary;
+  }
+}
+
+.el-progress-circle path:first-child {
+  stroke: #1b252f !important;
+}
+
+.home-dropdown-top {
+  color: #d3d3d3;
+}
+
+.header-common {
+  background: #2b3036;
+  border-bottom: 1px solid #1e2226;
+
+  .logo {
+    background: url('/images/easc.png');
+    height: 28px;
+    width: 120px;
+    background-size: 100% 100%;
+  }
+
+  a {
+    color: #f2f2f2;
+
+    &:hover {
+      color: #f2f2f2;
+    }
+  }
+
+  .submenu-main {
+    background: rgba(0, 0, 0, 0.8) !important;
+    border-right: 1px solid hsla(0, 0%, 100%, 0.15);
+
+    .submenu-main-link {
+      color: #fff;
+
+      &:hover {
+        background-color: #1890ff;
+
+        .title-text {
+          a {
+            color: #f2f2f2;
+          }
+
+          i {
+            color: #f2f2f2;
+          }
+        }
+
+        .submenu-expand {
+          display: block;
+          background: rgba(0, 0, 0, 0.8) !important;
+          left: 219px;
+        }
+      }
+    }
+  }
+
+  .submenu-expand {
+    border: 1px solid rgb(34, 35, 38);
+    background: rgb(28, 33, 48);
+
+    h3 {
+      border-bottom: 1px solid hsla(0, 0%, 100%, 0.15);
+    }
+
+    li {
+      a:hover {
+        color: rgb(60, 188, 255);
+      }
+    }
+  }
+
+  .menu-trigger {
+    color: #e6e6e6;
+    background: #323940;
+  }
+
+  .user_info {
+    color: #e6e6e6;
+  }
+
+  .head_icon {
+    color: #8e9da7;
+  }
+}
+
+.el-select-dropdown {
+  border: solid 1px #595959;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  .el-select-dropdown__item {
+    color: #e6e6e6;
+  }
+
+  .el-select-dropdown__item.hover,
+  .el-select-dropdown__item:hover {
+    background-color: #1890ff !important;
+    color: #f2f2f2 !important;
+  }
+}
+
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected {
+  background: transparent;
+  color: #f2f2f2 !important;
+}
+
+#sideBar {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.el-main {
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.el-range-input {
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.el-picker-panel,
+.el-picker-panel__footer {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.el-date-table td.disabled div {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.el-date-table td.in-range div:hover {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.el-pagination button:hover {
+  color: #1890ff !important;
+}
+
+.el-pager li,
+.el-pagination button:disabled,
+.el-pagination .btn-prev,
+.el-pagination .btn-next {
+  background: rgba(255, 255, 255, 0.4) !important;
+  color: #c0c4cc !important;
+}
+
+.el-pager li.active,
+.el-pager li:hover {
+  background: #1890ff !important;
+  color: #ffffff !important;
+}
+
+.el-year-table td .cell {
+  color: #f2f2f2;
+}
+
+.el-input-group__append {
+  .el-button {
+    background: transparent !important;
+    border: none;
+  }
+}
+
+.el-select-dropdown__item {
+  .el-tree {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+  }
+}
+
+.el-tree {
+  background: transparent;
+}
+
+.el-input.is-disabled .el-input__inner {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: #f2f2f2 !important;
+}
+
+.el-range-input {
+  background-color: #4b545a;
+}
+
+.el-calendar {
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.el-calendar__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid #cecece;
+}
+
+.el-calendar__title {
+  color: #f2f2f2;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.el-calendar__body {
+  padding: 12px 20px 35px;
+}
+
+.el-calendar-table {
+  table-layout: fixed;
+  width: 100%;
+
+  thead th {
+    padding: 12px 0;
+    color: #f2f2f2;
+    font-weight: 400;
+  }
+
+  &:not(.is-range) td.next,
+  .el-calendar-table:not(.is-range) td.prev {
+    color: #c0c4cc;
+  }
+
+  td {
+    border-bottom: 1px solid #595959;
+    border-right: 1px solid #595959;
+    vertical-align: top;
+    -webkit-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+  }
+
+  td.is-selected {
+    background-color: none;
+  }
+
+  td.is-today {
+    color: #409eff;
+  }
+
+  tr:first-child td {
+    border-top: 1px solid #595959;
+  }
+
+  tr td:first-child {
+    border-left: 1px solid #595959;
+  }
+
+  tr.el-calendar-table__row--hide-border td {
+    border-top: none;
+  }
+
+  .el-calendar-day {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 8px;
+    height: 85px;
+  }
+
+  .el-calendar-day:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+  }
+}
+
+.el-dialog__body {
+  color: #f2f2f2;
+}
+
+.el-radio__label,
+.el-checkbox__label {
+  color: #f2f2f2;
+}
+
+.cell .el-button.el-tooltip,
+.cell .el-button {
+  width: 20px !important;
+  height: 20px !important;
+  padding: 0 !important;
+}
+
+.el-button.el-tooltip {
+  width: 25px !important;
+  height: 25px !important;
+  padding: 0 !important;
+}
+
+.el-tabs__item {
+  height: 35px;
+  line-height: 35px;
+}
+
+.el-form-item__label {
+  text-align: left;
+}
+
+.el-form-item.is-required:not(.is-no-asterisk)>.el-form-item__label:before {
+  margin-left: -9.83px;
+}
+
+.el-dialog__body {
+  padding: 20px 80px;
+}
+
+.el-message-box__btns button:nth-child(1) {
+  float: right;
+  margin-left: 10px;
+}
+
+#roleList,
+#moduleList,
+#appsList,
+#userList {
+  .user_tree {
+    .el-tree {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      align-content: flex-start;
+
+      .el-tree-node {
+        width: 20%;
+        padding: 10px 0;
+
+        .el-tree-node {
+          width: 100%;
+        }
+
+        .el-tree-node__label {
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+
+#roleList,
+#userList,
+#moduleList,
+#appsList,
+#ModuleList,
+#navigationMenuList {
+
+  .define-tree,
+  .operation_all {
+    border: 1px solid #595959;
+  }
+
+  .content,
+  .operation_gather {
+    color: #f2f2f2;
+  }
+}
+
+#major-list,
+#resourceList,
+#PositionList,
+#appsList,
+#userOrg {
+  .relevance_box {
+    border: 1px solid #595959;
+
+    .box_head {
+      border-bottom: 1px solid #595959;
+    }
+  }
+}
+
+#userOrg {
+  .border_line {
+    border-color: #595959 !important;
+  }
+
+  .desc-field {
+    color: #f2f2f2 !important;
+  }
+
+  .disabled_style {
+    .el-checkbox__input.is-disabled .el-checkbox__inner {
+      background-color: #FFFFFF;
+      border: 1px solid #DCDFE6;
+    }
+
+    .el-checkbox__input.is-disabled+span.el-checkbox__label {
+      color: #fff;
+    }
+
+    .el-checkbox__input.is-checked+span.el-checkbox__label {
+      color: #1890ff;
+    }
+
+    .el-checkbox__input.is-checked .el-checkbox__inner {
+      background-color: #1890ff;
+      border-color: #1890ff;
+    }
+
+    .el-checkbox__input.is-disabled.is-checked .el-checkbox__inner::after {
+      border-color: #fff;
+    }
+  }
+}
+
+.el-tree-select-popper {
+  .el-input-group__append {
+    border: none;
+  }
+
+  .el-button {
+    background: #2e364b !important;
+    border: 1px solid #4c5b79;
+    padding: 6px 15px;
+    font-size: 13px;
+    border-radius: 3px;
+    border-left: none !important;
+    color: #ffffff !important;
+  }
+
+  .el-tree-node__content:hover {
+    background-color: #1890ff;
+  }
+
+  .is-current>.el-tree-node__content {
+    background-color: #1890ff;
+  }
+}
+
+#pageTags {
+  background: rgba(255, 255, 255, 0.05) !important;
+  box-shadow: none !important;
+  border-color: $--border-color-base !important;
+  -webkit-box-shadow: none !important;
+  margin-bottom: 0px !important;
+  padding-top: 0 !important;
+
+  >span {
+    margin-top: 5px !important;
+  }
+}

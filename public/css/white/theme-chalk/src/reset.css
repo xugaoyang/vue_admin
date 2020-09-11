@@ -1,0 +1,40 @@
+/*
+Error: Invalid US-ASCII character "\xE5"
+        on line 4 of reset.scss
+
+1: @import 'common/var';
+2: 
+3: body {
+4:   font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+5:   font-weight: 400;
+6:   font-size: $--font-size-base;
+7:   color: $--color-black;
+8:   -webkit-font-smoothing: antialiased;
+9: }
+
+Backtrace:
+reset.scss:4
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/util.rb:1048:in `rescue in block in find_encoding_error'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/util.rb:1045:in `block in find_encoding_error'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/util.rb:1044:in `each'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/util.rb:1044:in `each_with_index'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/util.rb:1044:in `find_encoding_error'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/util.rb:772:in `check_sass_encoding'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/engine.rb:444:in `check_encoding!'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/engine.rb:400:in `_to_tree'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:391:in `run'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/exec/base.rb:52:in `parse'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/exec/base.rb:19:in `parse!'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/bin/sass:13:in `<top (required)>'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1/bin/sass:22:in `load'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1/bin/sass:22:in `<main>'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `eval'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid US-ASCII character \"\xE5\"\A         on line 4 of reset.scss\A \A 1: @import 'common/var';\A 2: \A 3: body {\A 4:   font-family: \"Helvetica Neue\",Helvetica,\"PingFang SC\",\"Hiragino Sans GB\",\"Microsoft YaHei\",\"微软雅黑\",Arial,sans-serif;\A 5:   font-weight: 400;\A 6:   font-size: $--font-size-base;\A 7:   color: $--color-black;\A 8:   -webkit-font-smoothing: antialiased;\A 9: }"; }

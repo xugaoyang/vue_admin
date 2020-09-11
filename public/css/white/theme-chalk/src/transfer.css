@@ -1,0 +1,69 @@
+/*
+Error: Invalid US-ASCII character "\xE6"
+        on line 164 of checkbox.scss
+        from line 6 of transfer.scss
+
+159: 
+160:       & + .el-checkbox__label {
+161:         color: $--checkbox-checked-text-color;
+162:       }
+163:     }
+164:     @include when(focus) { /*focus时 视觉上区分*\/
+165:       .el-checkbox__inner {
+166:         border-color: $--checkbox-input-border-color-hover;
+167:       }
+168:     }
+169:     @include when(indeterminate) {
+
+Backtrace:
+checkbox.scss:164
+transfer.scss:6
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/util.rb:1048:in `rescue in block in find_encoding_error'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/util.rb:1045:in `block in find_encoding_error'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/util.rb:1044:in `each'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/util.rb:1044:in `each_with_index'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/util.rb:1044:in `find_encoding_error'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/util.rb:772:in `check_sass_encoding'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/engine.rb:444:in `check_encoding!'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/engine.rb:400:in `_to_tree'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/engine.rb:321:in `to_tree'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:327:in `block in visit_import'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/stack.rb:88:in `block in with_import'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/stack.rb:88:in `with_import'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:391:in `run'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/exec/base.rb:52:in `parse'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/exec/base.rb:19:in `parse!'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/bin/sass:13:in `<top (required)>'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1/bin/sass:22:in `load'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1/bin/sass:22:in `<main>'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `eval'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid US-ASCII character \"\xE6\"\A         on line 164 of checkbox.scss\A         from line 6 of transfer.scss\A \A 159: \A 160:       & + .el-checkbox__label {\A 161:         color: $--checkbox-checked-text-color;\A 162:       }\A 163:     }\A 164:     @include when(focus) { /*focus时 视觉上区分*/\A 165:       .el-checkbox__inner {\A 166:         border-color: $--checkbox-input-border-color-hover;\A 167:       }\A 168:     }\A 169:     @include when(indeterminate) {"; }

@@ -1,0 +1,42 @@
+/*
+Error: Invalid US-ASCII character "\xE8"
+        on line 54 of dropdown.scss
+
+49:   @include e(icon) {
+50:     font-size: 12px;
+51:     margin: 0 3px;
+52:   }
+53: 
+54:   .el-dropdown-selfdefine { // 自定义
+55:     &:focus:active, &:focus:not(.focusing) {
+56:       outline-width: 0;
+57:     }
+58:   }
+59: }
+
+Backtrace:
+dropdown.scss:54
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/util.rb:1048:in `rescue in block in find_encoding_error'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/util.rb:1045:in `block in find_encoding_error'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/util.rb:1044:in `each'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/util.rb:1044:in `each_with_index'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/util.rb:1044:in `find_encoding_error'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/util.rb:772:in `check_sass_encoding'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/engine.rb:444:in `check_encoding!'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/engine.rb:400:in `_to_tree'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:391:in `run'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/exec/base.rb:52:in `parse'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/exec/base.rb:19:in `parse!'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/bin/sass:13:in `<top (required)>'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1/bin/sass:22:in `load'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1/bin/sass:22:in `<main>'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `eval'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid US-ASCII character \"\xE8\"\A         on line 54 of dropdown.scss\A \A 49:   @include e(icon) {\A 50:     font-size: 12px;\A 51:     margin: 0 3px;\A 52:   }\A 53: \A 54:   .el-dropdown-selfdefine { // 自定义\A 55:     &:focus:active, &:focus:not(.focusing) {\A 56:       outline-width: 0;\A 57:     }\A 58:   }\A 59: }"; }

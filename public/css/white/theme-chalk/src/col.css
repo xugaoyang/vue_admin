@@ -1,0 +1,69 @@
+/*
+Error: Invalid US-ASCII character "\xE4"
+        on line 17 of common/var.scss
+        from line 1 of col.scss
+
+12: $--border-transition-base: border-color .2s cubic-bezier(.645,.045,.355,1) !default;
+13: $--color-transition-base: color .2s cubic-bezier(.645,.045,.355,1) !default;
+14: 
+15: /* Color
+16: -------------------------- *\/
+17: /// color|[主题色,primary color,color primario]|BrandColor|0
+18: $--color-primary: #409EFF !default;
+19: /// color|[基础白色,basic white,basic white]|BackgroundColor|4
+20: $--color-white: #FFFFFF !default;
+21: /// color|[基础黑色,basic black,basic black]|BackgroundColor|4
+22: $--color-black: #000000 !default;
+
+Backtrace:
+common/var.scss:17
+col.scss:1
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/util.rb:1048:in `rescue in block in find_encoding_error'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/util.rb:1045:in `block in find_encoding_error'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/util.rb:1044:in `each'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/util.rb:1044:in `each_with_index'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/util.rb:1044:in `find_encoding_error'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/util.rb:772:in `check_sass_encoding'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/engine.rb:444:in `check_encoding!'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/engine.rb:400:in `_to_tree'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/engine.rb:321:in `to_tree'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:327:in `block in visit_import'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/stack.rb:88:in `block in with_import'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/stack.rb:88:in `with_import'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:391:in `run'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/exec/base.rb:52:in `parse'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/lib/sass/exec/base.rb:19:in `parse!'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.1/bin/sass:13:in `<top (required)>'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1/bin/sass:22:in `load'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1/bin/sass:22:in `<main>'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `eval'
+/Users/kerovieux/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid US-ASCII character \"\xE4\"\A         on line 17 of common/var.scss\A         from line 1 of col.scss\A \A 12: $--border-transition-base: border-color .2s cubic-bezier(.645,.045,.355,1) !default;\A 13: $--color-transition-base: color .2s cubic-bezier(.645,.045,.355,1) !default;\A 14: \A 15: /* Color\A 16: -------------------------- */\A 17: /// color|[主题色,primary color,color primario]|BrandColor|0\A 18: $--color-primary: #409EFF !default;\A 19: /// color|[基础白色,basic white,basic white]|BackgroundColor|4\A 20: $--color-white: #FFFFFF !default;\A 21: /// color|[基础黑色,basic black,basic black]|BackgroundColor|4\A 22: $--color-black: #000000 !default;"; }

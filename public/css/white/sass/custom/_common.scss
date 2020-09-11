@@ -1,0 +1,302 @@
+*{
+  word-wrap: break-word;
+  word-break: normal;
+}
+*, button, input, i, a {
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*:active,
+*:hover {
+  outline: none !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+
+a{
+  &:hover,&:focus,&:active{
+    text-decoration: none;
+  }
+}
+.w-100,.full-width {
+  width: 100%;
+}
+.h-100{
+  height: 100%;
+}
+.max-100 {
+  max-width: 100%;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.img-thumbnail {
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  max-width: 100%;
+  height: auto;
+}
+.fixed-full {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.b-0 { border: 0 !important; }
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+  li {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.ell, .text-overflow{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.rounded-circle {
+  border-radius: 50% !important;
+}
+.hr {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  font-size: 0;
+  border-width: 1px 0 0 0;
+  border-top: 1px solid #E3E3E3;
+  margin: 12px 0;
+  border-top-color: rgba(0, 0, 0, 0.11);
+}
+.hr-double {
+  height: 3px;
+  border-top: 1px solid #E3E3E3;
+  border-bottom: 1px solid #E3E3E3;
+}
+
+.fix {
+  *zoom: 1;
+}
+
+.fix:after {
+  display: block;
+  content: "clear";
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.clear {
+  clear: both;
+  font-size: 0;
+  line-height: 0;
+  height: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.l {
+  float: left;
+}
+
+.r {
+  float: right;
+}
+
+.auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dn {
+  display: none;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.db {
+  display: block;
+}
+
+.dib {
+  display: inline-block;
+}
+
+.di {
+  display: inline;
+}
+
+.n {
+  font-weight: normal;
+  font-style: normal;
+}
+
+.b {
+  font-weight: bold;
+}
+
+.i {
+  font-style: italic;
+}
+.tl{
+  text-align: left;
+}
+.tc{
+  text-align: center;
+}
+.tr{
+  text-align: right;
+}
+.ti2{
+  text-indent: 2em;
+}
+
+
+$grey-333:                  #333;
+$grey-666:                  #666;
+$grey-999:                  #999;
+$grey-ccc:                  #ccc;
+$grey-ddd:                  #ddd;
+$grey-eee:                  #eee;
+$grey-f5:                 #f5f5f5;
+$white:                  #ffffff;
+$yellow:            #ffde03;
+$pink:            #FFDBCF;
+$purple:          #852EF6;
+$brown:          #442B2D;
+$blue: #4aa0ff;
+
+@each $color-name, $color in
+                (grey-333, $grey-333),
+                (grey-999, $grey-999),
+                (grey-ccc, $grey-ccc),
+                (grey-ddd, $grey-ddd),
+                (grey-eee, $grey-eee),
+                (grey-f5, $grey-f5),
+                (white, $white),
+                (yellow, $yellow),
+                (pink, $pink),
+                (purple, $purple),
+                (blue, $blue),
+                (brown, $brown), {
+  .text-color-#{$color-name} {
+    color: $color !important;
+  }
+  .bg-color-#{$color-name} {
+    background-color: $color !important;
+  }
+  .border-color-#{$color-name} {
+    border: 1px solid $color !important;
+  }
+  .border-color-#{$color-name}-left {
+    border-left: 1px solid $color !important;
+  }
+  .border-color-#{$color-name}-right {
+    border-right: 1px solid $color !important;
+  }
+  .border-color-#{$color-name}-top {
+    border-top: 1px solid $color !important;
+  }
+  .border-color-#{$color-name}-bottom {
+    border-bottom: 1px solid $color !important;
+  }
+}
+
+@each $align-type in
+        baseline,
+        top,
+        middle,
+        bottom,
+        text-bottom,
+        text-top {
+  .align-#{$align-type} {
+    vertical-align: #{$align-type} !important;
+  }
+}
+
+@each $pos-type in
+        static,
+        relative,
+        absolute,
+        fixed,
+        sticky {
+  .position-#{$pos-type} {
+    position: #{$pos-type} !important;
+  }
+}
+
+$sp-size:0;
+@while $sp-size <= 30{
+  .m-#{$sp-size}{
+    margin: 1px * $sp-size !important;
+  }
+  .m-t-#{$sp-size}{
+    margin-top: 1px * $sp-size !important;
+  }
+  .m-b-#{$sp-size}{
+    margin-bottom: 1px * $sp-size !important;
+  }
+  .m-l-#{$sp-size}{
+    margin-left: 1px * $sp-size !important;
+  }
+  .m-r-#{$sp-size}{
+    margin-right: 1px * $sp-size !important;
+  }
+  .p-#{$sp-size}{
+    padding: 1px * $sp-size !important;
+  }
+  .p-t-#{$sp-size}{
+    padding-top: 1px * $sp-size !important;
+  }
+  .p-b-#{$sp-size}{
+    padding-bottom: 1px * $sp-size !important;
+  }
+  .p-l-#{$sp-size}{
+    padding-left: 1px * $sp-size !important;
+  }
+  .p-r-#{$sp-size}{
+    padding-right: 1px * $sp-size !important;
+  }
+  $sp-size: $sp-size + 5;
+}
+
+$px-size:12;
+@while $px-size <= 34{
+  .fz-#{$px-size}{
+    font-size: 1px * $px-size !important;
+  }
+  .height-#{$px-size}{
+    height: 1px * $px-size !important;
+    line-height: 1px * $px-size !important;
+  }
+  $px-size: $px-size + 2;
+}
+
+$radius-size:0;
+@while $radius-size <=10{
+  .rounded-#{$radius-size}{
+    border-radius: 1px * $radius-size !important;
+  }
+  $radius-size: $radius-size + 2;
+}
+

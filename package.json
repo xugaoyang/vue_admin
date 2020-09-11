@@ -1,0 +1,164 @@
+{
+  "name": "wiz_hr",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "deploy": "node deploy.js deploy easc",
+    "generate a module": "node node_modules/wiz-common/generator/app.js g module",
+    "generate a view": "node node_modules/wiz-common/generator/app.js g view",
+    "generate a service": "node gnode_modules/wiz-common/enerator/app.js g service",
+    "serve:test": "vue-cli-service serve --mode serve_test",
+    "build:test": "vue-cli-service build --mode build_test",
+    "serve:dev": "vue-cli-service serve --mode serve_dev",
+    "serve:mock": "vue-cli-service serve --mode serve_mock",
+    "build:dev": "vue-cli-service build --mode build_dev",
+    "lint": "vue-cli-service lint",
+    "test:e2e": "vue-cli-service test:e2e",
+    "test:unit": "vue-cli-service test:unit --reporter mocha-junit-reporter --reporter-options mochaFile=./test-results/unit.xml",
+    "test:report": "node junit.viewer.js",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "**/**.{js,json,pcss,md,vue}": [
+      "node ./lint-prettier.js",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run lint-staged"
+    }
+  },
+  "dependencies": {
+    "await-to-js": "^2.1.1",
+    "axios": "^0.18.0",
+    "dayjs": "^1.8.34",
+    "echarts": "^4.2.1",
+    "element-ui": "^2.12.0",
+    "encodeurl": "^1.0.2",
+    "faker": "^4.1.0",
+    "install": "^0.12.2",
+    "js-base64": "^2.5.1",
+    "js-md5": "^0.7.3",
+    "localforage": "^1.7.3",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "npm": "^6.8.0",
+    "nprogress": "^0.2.0",
+    "qrcode": "^1.4.4",
+    "qs": "^6.7.0",
+    "uuid": "^3.3.2",
+    "vue": "2.6.7",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "vuex-persistedstate": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.2.0",
+    "@vue/cli-plugin-eslint": "^3.2.0",
+    "@vue/cli-plugin-unit-mocha": "^3.3.0",
+    "@vue/cli-service": "^3.2.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "@vue/test-utils": "^1.0.0-beta.20",
+    "babel-eslint": "^10.0.1",
+    "chai": "^4.1.2",
+    "chalk": "^2.4.2",
+    "commander": "^2.19.0",
+    "compression-webpack-plugin": "^2.0.0",
+    "eslint": "^5.8.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-vue": "^5.0.0-0",
+    "fs": "^0.0.1-security",
+    "husky": "^1.3.1",
+    "inquirer": "^6.2.1",
+    "junit-viewer": "^4.11.1",
+    "lint-staged": "^8.1.5",
+    "mocha-junit-reporter": "^1.18.0",
+    "node-sass": "4.9.2",
+    "prettier": "^1.16.4",
+    "prettier-eslint-cli": "^4.7.1",
+    "sass-loader": "^7.0.3",
+    "shelljs": "^0.8.3",
+    "vue-cli-plugin-element": "^1.0.0",
+    "vue-cli-plugin-yaml": "^1.0.1",
+    "vue-template-compiler": "2.6.7"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "plugin:prettier/recommended",
+      "prettier/vue",
+      "@vue/airbnb"
+    ],
+    "rules": {
+      "prefer-destructuring": [
+        "error",
+        {
+          "array": false,
+          "object": false
+        }
+      ],
+      "comma-dangle": 0,
+      "no-extra-semi": 0,
+      "no-bitwise": 0,
+      "prettier/prettier": 0,
+      "lines-between-class-members": 0,
+      "semi": [
+        2,
+        "never"
+      ],
+      "arrow-body-style": [
+        "error",
+        "always"
+      ],
+      "operator-assignment": [
+        0,
+        "never"
+      ],
+      "import/no-dynamic-require": 0,
+      "global-require": 0,
+      "linebreak-style": 0,
+      "no-unused-expressions": 0,
+      "no-undef": 0,
+      "no-param-reassign": 0,
+      "no-new": 0,
+      "no-console": 0,
+      "no-case-declarations": 0,
+      "import/no-unresolved": 0,
+      "import/extensions": [
+        "error",
+        "never",
+        {
+          "js": "never",
+          "vue": "never"
+        }
+      ],
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "optionalDependencies": [
+            "test/unit/index.js"
+          ]
+        }
+      ]
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
